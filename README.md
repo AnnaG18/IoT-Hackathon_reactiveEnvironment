@@ -3,9 +3,7 @@
 ## ToDo
 
 * Projekt Name
-* MVP erstellen
 * Projekt Ziel definieren
-* Benötigte Materiealien definieren
 
 ## Table of contents
 
