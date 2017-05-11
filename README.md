@@ -1,4 +1,4 @@
-# IoT-Hackathon 
+# IoT-Hackathon
 
 ## ToDo
 
@@ -9,8 +9,8 @@
 
 ## Table of contents
 
-[Project goal](#Project goal)  
-[Service Design](#Service Design) 
+[Project goal](#Project-goal)
+[Service Design](#Service-Design)
 
 ## Project goal
 
