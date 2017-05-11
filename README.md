@@ -1,6 +1,12 @@
-# IoT-Hackathon_reactiveEnvironment
+# IoT-Hackathon 
 
 ## ToDo
+
+* Projekt Name
+* MVP erstellen
+* Projekt Ziel Definieren
+* Service Design erstellen
+* 
 
 ## Table of contents
 
@@ -19,3 +25,5 @@
 ## IoT Methods
 
 ## Outlook
+
+## Presentation
