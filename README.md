@@ -5,9 +5,12 @@
 * Projekt Name
 * MVP erstellen
 * Projekt Ziel definieren
-* Benötigte Sensoren definieren
+* Benötigte Materiealien definieren
 
 ## Table of contents
+
+[Project goal](#Project goal)  
+[Service Design](#Service Design) 
 
 ## Project goal
 
@@ -19,7 +22,7 @@ Das Team besteht aus folgenden Personen:
 
 * Anna Gorr
 * Johannes Wanner
-* Natashi Sigle
+* Natascha Sigle
 * Peter Kühfuß
 
 ## MVP
