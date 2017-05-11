@@ -3,7 +3,8 @@
 ## ToDo
 
 * Projekt Name
-* Projekt Ziel definieren
+* Hackathon Vorbesprehung
+* Einarbeitung in die verschiedenen Technologien
 
 ## Table of contents
 
