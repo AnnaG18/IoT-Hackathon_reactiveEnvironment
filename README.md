@@ -34,7 +34,8 @@ Das Team besteht aus folgenden Personen:
 
 ## MVP
 
-Umgebungsqualität anhand einer Lampe farblich darstellen
+Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie ein Sensorknoten, der Temperatur und Feuchtigkeit im Raum 125 misst, installiert.
+Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einzelnen Komponenten hergestellt wird. Die Umgebungsqualität soll anhand einer Lampe farblich dargestellt werden können. Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use Cases. Beispielweise könnte ein Use Case die farbliche Änderung einer Glühbirne von rot auf blau sein, wenn die Raumtemperatur von warm auf kalt umschwnenkt. Dazu muss bei der Regelerstellung dann eine Temperaturgrenze definiert werden. Daher ist es wichtig, dass man weiß, welcher Sensor oder welche Komponente welche Werte rückmeldet.
 
 ## Architecture
 
