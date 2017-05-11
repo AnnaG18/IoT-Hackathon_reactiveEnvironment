@@ -10,8 +10,11 @@
 ## Table of contents
 
 [Project goal](#Project-goal)
+
 [Service Design](#Service-Design)
+
 [Organization](#Organization)
+
 [MVP](#MVP)
 
 ## Project goal
