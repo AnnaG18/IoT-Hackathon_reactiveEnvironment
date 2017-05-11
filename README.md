@@ -4,9 +4,8 @@
 
 * Projekt Name
 * MVP erstellen
-* Projekt Ziel Definieren
-* Service Design erstellen
-* 
+* Projekt Ziel definieren
+* Benötigte Sensoren definieren
 
 ## Table of contents
 
@@ -15,6 +14,13 @@
 ## Service Design
 
 ## Organization
+
+Das Team besteht aus folgenden Personen:
+
+* Anna Gorr
+* Johannes Wanner
+* Natashi Sigle
+* Peter Kühfuß
 
 ## MVP
 
