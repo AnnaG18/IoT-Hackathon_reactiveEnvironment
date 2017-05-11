@@ -51,6 +51,14 @@ Umgebungsqualität anhand einer Lampe farblich darstellen
 
 ## IoT Methods
 
+### IoT Design Principles
+
+Designing an IoT architecture we followed the design principles stated in the IoT lecture:
+
+* Invisibility: The sensor network is not visible and no user interaction is needed.
+* Manual override: A manual override is neither applicable nor necessary in this case.
+* Feedback: Sensor data can be monitored using the web UI or visuell Feedback.
+
 ## Outlook
 
 ## Presentation
