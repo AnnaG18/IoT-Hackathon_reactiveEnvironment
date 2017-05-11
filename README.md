@@ -34,6 +34,8 @@ Das Team besteht aus folgenden Personen:
 
 ## MVP
 
+Umgebungsqualität anhand einer Lampe farblich darstellen
+
 ## Architecture
 
 ## Implementation
