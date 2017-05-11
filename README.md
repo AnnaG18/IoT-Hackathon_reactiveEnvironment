@@ -40,6 +40,13 @@ Umgebungsqualität anhand einer Lampe farblich darstellen
 
 ## Architecture
 
+### Used hardware
+
+* Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
+* Gateway and Sensors: Arduino Nano (xcsource clone)
+* Radio module: NRF24L01+
+* Air/Humidity sensor: DHT-22
+
 ## Implementation
 
 ## IoT Methods
