@@ -21,6 +21,8 @@
 
 ## Project goal
 
+A service utilizing beacon technology providing additional value for students and lecturers at Herman Hollerith Centre shall be designed and a MVP implemented.
+
 ## Service Design
 
 ## Organization
