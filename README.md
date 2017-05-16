@@ -2,9 +2,14 @@
 
 ## ToDo
 
-* Projekt Name
-* Hackathon Vorbesprehung
+* Projekt Name - FarbenFROH -Icon lächelnder Luchs
+
 * Einarbeitung in die verschiedenen Technologien
+  * home assistant näher anschauen ob tauglich
+  * Eigenes Script für philiphue näher anschauen.
+* value proposition
+* Service blueprint
+* Noten gewichtung in to dos umwandeln
 
 ## Table of contents
 
@@ -35,11 +40,27 @@ Das Team besteht aus folgenden Personen:
 
 ## MVP
 
-Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie ein Sensorknoten, der Temperatur und Feuchtigkeit im Raum 125 misst, installiert.
+Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie  Sensorknoten, die Temperatur, Co2 gehalt,Lautstärke, im Raum 125 misst, installiert.
 Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einzelnen Komponenten hergestellt wird. Die Umgebungsqualität soll anhand einer Lampe farblich dargestellt werden können.
 
 Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use Cases. Beispielweise könnte ein Use Case die farbliche Änderung einer Glühbirne von rot auf blau sein, wenn die Raumtemperatur von warm auf kalt umschwnenkt. Dazu muss bei der Regelerstellung dann eine Temperaturgrenze definiert werden. Daher ist es wichtig, dass man weiß, welcher Sensor oder welche Komponente welchen Werte rückmeldet.
+Position am besten der Lampe in einer Ecke damit man das Licht gut erkennen kann.
+Rückmeldung in Farben:
+  Grün alles ok standardmäßig.
+  Die stärke des jeweiligen Zustands wird durch Helligkeit ausgedrückt.
+  Temperatur Blau-zukalt,  Rot-zuheiß
+  Co2 gehalt viel c02-lila 
+  Lautstärke zulaut-orange
 
+
+## Extension
+Wenn wir noch Zeit haben nach dem MVP:
+Emotionen werden durch ein smiley aus den Sensordaten generiert.
+  -schwitzendes bei hohen temperatur, 
+  -erstickendes bei hohen co2
+  -bei hoher Lautstärke hält er sich die Ohren zu. 
+  -bei niedrigen Temperaturen frierender smiley
+  -
 ## Architecture
 
 ### Used hardware
