@@ -41,8 +41,11 @@ Die Sensoren als Teil der IoT Architektur sind implementiert, um Zugriff auf Sen
 Es werden spezielle Ansprüche an IT-Services mit IoT-Ding gestellt. Skalierbarkeit, Stabilität und einfache Wartung sind wichtige Eigenschaften für ein IoT-Ding. Die Steuerung des Farbwertes anhand der Glühbirne soll nur anhand der Sensordaten erfolgen, eine direkte Interaktion mit dem Nutzer soll nicht notwendig sein. Aus diesem Grund sollen nur notwendige und differenzierte Abfragen implementiert werden, um die Glühbirne zu regulieren. Der Nutzer muss klar erkennen, ob die Auswertung der Sensordaten (Farbwerte der Glühbirnenlichts) erfolgreich ist. 
 (Es sollten auch Sicherheitsaspekte berücksichtigt werden, damit raumbezogene Daten nicht manipuliert werden können.)
 
-Die Value Proposition Canvas ist unten dargestellt: 
+Die Value Proposition Canvas und Business Modal Canvas sind unten dargestellt: 
 
+
+![folie2](https://cloud.githubusercontent.com/assets/22808808/26324694/2215fd78-3f34-11e7-9d0e-6dbe2c55941c.jpg)
+![folie3](https://cloud.githubusercontent.com/assets/22808808/26324695/224bac02-3f34-11e7-88a8-d603b9dba85f.jpg)
 
 
 ## Organization
