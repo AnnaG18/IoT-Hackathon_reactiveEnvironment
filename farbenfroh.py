@@ -47,15 +47,25 @@ def getStateAvg(api, list):
         avg = 0
     return avg
 
-def setLightColor(api, temperature, humidity, co2):
+def setLightColor(api, values):
     print("Do Light")
-    print(temperature)
+    print(values['temp_min'])
 
 #Permament loop
 run = True
 while run:
     #Get average values
-    setLightColor(api, getStateAvg(api, temperature_ids), getStateAvg(api, humidity_ids), getStateAvg(api, co2_ids))
+    values = {'temp_min':False, 'temp_min_bright':0,'temp_max':False,'temp_max_bright':0,'hum_min':False,'hum_min_bright':0,'hum_max':False,'hum_max_bright':0,'Co2_max':False,'Co2_max_bright':0}
+
+
+    tempAvg = getStateAvg(api, temperature_ids)
+    if tempAvg < int(Config.get('Sectors', 'Temp_Min')):
+        values['temp_min'] = True
+    elif tempAvg > int(Config.get('Sectors', 'Temp_Max')):
+        values['temp_max'] = True
+
+    getStateAvg(api, humidity_ids), getStateAvg(api, co2_ids)
+    setLightColor(api, values)
 
     #Delay between call
     time.sleep(int(Config.get('System', 'Delay')))
