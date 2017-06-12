@@ -64,16 +64,13 @@ Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einze
 Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use Cases. Beispielsweise könnte ein Use Case die farbliche Änderung einer Glühbirne auf blau sein, wenn die Raumtemperatur zu kalt ist. Dazu muss bei der Regelerstellung eine Temperaturgrenze definiert werden. Daher ist es wichtig, dass man weiß, welcher Sensor oder welche Komponente welchen Werte rückmeldet.
 
 Rückmeldung in Farben:
-
-  Temperatur
+* Temperatur
   * zu kalt:    < 20°C     -> blau
   * zu warm:    > 26°C     -> rot
-  
-  Luftfeuchtigkeit
+* Luftfeuchtigkeit
   * zu niedrig: < 40%      -> gelb
   * zu hoch:    > 60%      -> grün
-  
-  CO2-Gehalt
+* CO2-Gehalt
   * zu hoch:    > 1.000ppm -> lila
 
 Zusätzliche Informationen:
