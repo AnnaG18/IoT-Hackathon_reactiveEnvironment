@@ -5,7 +5,7 @@
 
 * Einarbeitung in die verschiedenen Technologien (Peter)
   * home assistant näher anschauen ob tauglich
-  * Eigenes Script für philiphue näher anschauen.
+  * eigenes Script für Philips hue näher anschauen.
 * Value proposition (Anna)
 * Service blueprint (Natascha)
 * Noten gewichtung in to dos umwandeln (Johannes)
