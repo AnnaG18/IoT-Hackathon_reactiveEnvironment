@@ -10,46 +10,52 @@ import time
 
 #Config
 Config = configparser.ConfigParser()
-Config.read("config.ini")
-
-ROOM = Config.get('Sensors', 'Room')
+Config.read("config.conf")
 
 #Connect to Home Assistant
 api = remote.API(Config.get('HomeAssistant', 'IP'), Config.get('HomeAssistant', 'PW'))
 
-#get all sensor entities
-
+#Create Lists for Sensor IDs
 temperature_ids = []
 co2_ids = []
 humidity_ids = []
 
+#Get Sensor IDs from Home Assistant
 entities = remote.get_states(api)
 for entity in entities:
-    if str(entity).__contains__(ROOM) and not str(entity).__contains__("group"):
+    if str(entity).__contains__(Config.get('Sensors', 'Room')) and not str(entity).__contains__("group"):
         #print(entity)
-        if str(entity).__contains__("TEMP"):
+        if str(entity).__contains__("V_TEMP"):
             temperature_ids.append(entity.entity_id)
         elif str(entity).__contains__("V_LEVEL"):
             co2_ids.append(entity.entity_id)
-        elif str(entity).__contains__("HUM"):
+        elif str(entity).__contains__("V_HUM"):
             humidity_ids.append(entity.entity_id)
 
 
-
-def getState(api, list):
+#Get Avergage State of on Sensor Class
+def getStateAvg(api, list):
     i = 0
     sum = 0
     for list_item in list:
         value = remote.get_state(api, list_item)
         sum = sum + float(value.state)
         i = i + 1
-    avg = sum/i
+    if(i>0):
+        avg = sum/i
+    else:
+        avg = 0
     return avg
 
+def setLightColor(api, temperature, humidity, co2):
+    print("Do Light")
+    print(temperature)
+
+#Permament loop
 run = True
 while run:
-    print(getState(api, temperature_ids))
-    print(getState(api, humidity_ids))
-    print(getState(api, co2_ids))
+    #Get average values
+    setLightColor(api, getStateAvg(api, temperature_ids), getStateAvg(api, humidity_ids), getStateAvg(api, co2_ids))
 
-    time.sleep(Config.get('System', 'Delay'))
+    #Delay between call
+    time.sleep(int(Config.get('System', 'Delay')))
