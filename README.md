@@ -2,12 +2,18 @@
 
 ## ToDo
 * Projekt Name - FarbenFROH - Icon lächelnder Luchs
-
-* Konzeptidee
-* Passende Iot Methode anwenden
-* Einordnen in Iot Architektur
-* Bezug zum Geschäftlichen Potential herstellen
-* Ausführliche Verantwortlichkeiten
+* Vorgehen
+  * Systematische Durchführung
+  * Verantwortlichkeiten
+  * Konzeptidee
+  * Implementierung
+  * Präsentation
+  * Demo
+  * Repository
+* Dokumentation
+  * Iot Entwurfsmethode
+  * Einordnen in IoT Architektur
+  * Bezug zum Geschäftlichen Potential herstellen
  
 ## Table of contents
 1. [Project goal](#Project-goal)
