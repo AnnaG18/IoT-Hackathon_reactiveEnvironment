@@ -10,7 +10,7 @@ import time
 
 #Config
 Config = configparser.ConfigParser()
-Config.read("config.conf")
+Config.read("config.ini")
 
 #Connect to Home Assistant
 api = remote.API(Config.get('HomeAssistant', 'IP'), Config.get('HomeAssistant', 'PW'))
