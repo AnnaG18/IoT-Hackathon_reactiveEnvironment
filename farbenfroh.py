@@ -7,6 +7,7 @@ __author__      = "FarbenFroh"
 import homeassistant.remote as remote
 import configparser
 import time
+import ast
 
 #Config
 Config = configparser.ConfigParser()
@@ -48,13 +49,88 @@ def getStateAvg(api, list):
     return avg
 
 def setLightColor(api, values):
+    inuse = "free"
+    bright = 0.0
+    lamp = Config.get('Sensors', 'Lamp')
+    flag = 'leer'
+    while (values['temp_max'] == True or values['temp_min'] or values['hum_min'] == True or values['hum_max'] == True or
+                   values['Co2_max'] == True):
 
-    print("Do Light")
-    print("Temp Min: " + str(values['temp_min']))
-    print(values['temp_bright'])
+        if (values['temp_min'] == True and inuse == 'temp_min') or inuse == 'free':
+            print('Bright:' + str(bright))
+            print('TempMaxBright:' + str(values['temp_bright']))
+            inuse = 'temp_min'
+            if bright <= values['temp_bright'] and flag != 'reachedmax':
+                print('hoch')
+                bright = bright + 1
+                if (bright == values['temp_bright']): flag = 'reachedmax'
+            else:
+                if bright == 0:
+                    values['temp_min'] = False
+                bright = bright - 1
 
-    print("Hum Max: " + str(values['hum_max']))
-    print(values['hum_bright'])
+            color = ast.literal_eval(Config.get('Sectors', 'Temp_Min_Color'))
+            print(color)
+            remote.call_service(api, 'light', 'turn_on', {'entity_id': lamp, 'brightness': bright,
+                                                          'rgb_color': color})
+
+        if (values['temp_max'] == True and inuse == 'temp_max') or inuse == 'free':
+            inuse = 'temp_max'
+            if bright <= values['temp_bright'] and flag != 'reachedmax':
+                bright = bright + 1
+                if (bright == values['temp_bright']): flag = 'reachedmax'
+            else:
+                if bright == 0:
+                    values['temp_max'] = False
+                bright = bright - 1
+            remote.call_service(api, 'light', 'turn_on',
+                                {'entity_id': lamp, 'brightness': bright,
+                                 'rgb_color': Config.get('Sectors', 'Temp_Max_Color')})
+
+        if (values['hum_min'] == True and inuse == 'hum_min') or inuse == 'free':
+            inuse = 'hum_min'
+
+            if bright <= values['temp_bright'] and flag != 'reachedmax':
+
+                bright = bright + 1
+                if (bright == values['temp_bright']): flag = 'reachedmax'
+            else:
+                print('runter')
+                if bright == 0:
+                    values['Co2_max'] = False
+                bright = bright - 1
+            remote.call_service(api, 'light', 'turn_on',
+                                {'entity_id': lamp, 'brightness': bright,
+                                 'rgb_color': str(Config.get('Sectors', 'Hum_Min_Color'))})
+
+        if (values['hum_max'] == True and inuse == 'hum_max') or inuse == 'free':
+            inuse = 'hum_max'
+            if bright <= values['temp_bright'] and flag != 'reachedmax':
+
+                bright = bright + 1
+                if (bright == values['temp_bright']): flag = 'reachedmax'
+            else:
+                print('runter')
+                if bright == 0:
+                    values['hum_max'] = False
+                bright = bright - 1
+            remote.call_service(api, 'light', 'turn_on',
+                                {'entity_id': lamp, 'brightness': bright,
+                                 'rgb_color': str(Config.get('Sectors', 'Hum_Max_Color'))})
+
+        if (values['Co2_max'] == True and inuse == 'Co2_max') or inuse == 'free':
+            inuse = 'Co2_max'
+            if bright <= values['temp_bright'] and flag != 'reachedmax':
+
+                bright = bright + 1
+                if (bright == values['temp_bright']): flag = 'reachedmax'
+            else:
+                if bright == 0:
+                    values['Co2_max'] = False
+                bright = bright - 1
+            remote.call_service(api, 'light', 'turn_on',
+                                {'entity_id': lamp, 'brightness': bright,
+                                 'rgb_color': Config.get('Sectors', 'Co2_Max_Color')})
 
 #Permament loop
 run = True
@@ -85,6 +161,7 @@ while run:
         values['Co2_bright'] = (Co2Avg - int(Config.get('Sectors', 'Co2_Max'))) * 500
 
     setLightColor(api, values)
+
 
     #Delay between call
     time.sleep(int(Config.get('System', 'Delay')))
