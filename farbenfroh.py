@@ -10,7 +10,7 @@ import time
 
 #Config
 Config = configparser.ConfigParser()
-Config.read("config.conf")
+Config.read("config.ini")
 
 ROOM = Config.get('Sensors', 'Room')
 
