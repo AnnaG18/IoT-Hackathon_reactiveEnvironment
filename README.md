@@ -30,7 +30,7 @@
 9. [Presentation](#Presentation)
 
 ## Anwendungsidee - Use Case
-Eine Vorlesung findet im Raum 225 am HHZ statt. Professor und Studenten sind vor Ort. Nach einigen Stunden ist die Luftqualität schlechter geworden. Die PhilipsHue Lampe zeigt diesen Zustand durch eine lila Farbe an. Dadurch werden die Anwesenden auf die schlechte Luft aufmerksam gemacht.
+Eine Vorlesung findet im Raum 125 am HHZ statt. Professor und Studenten sind vor Ort. Nach einigen Stunden ist die Luftqualität schlechter geworden. Die PhilipsHue Lampe zeigt diesen Zustand durch eine lila Farbe an. Dadurch werden die Anwesenden auf die schlechte Luft aufmerksam gemacht.
 
 ## Konzeption
 
@@ -41,7 +41,7 @@ Wir wollen mit unserem Projekt die Lehr-und Lernumgebung von Studenten, Professo
 Dazu soll IoT zum Einsatz kommen. Mittels Umgebungssensoren sollen relevante Messdaten gesammelt werden. Die Messdaten sollen verarbeitet werden. Durch unsere Lösung wollen wir den Studenten hilfreiche Informationen zum Raum anzeigen. Wir wollen dadurch Bedingungen für eine gute Lernatmosphäre schaffen. Diese wird definiert durch niedrige Lautstärke und angehnehme Temperatur sowie niedrigem cO2 Gehalt. 
 
 ## Service Design
-Die Sensoren als Teil der IoT Architektur sind implementiert, um Zugriff auf Sensordaten zu erhalten. Der Raum 225 am HHZ ist mit Sensoren für die Temperatur, CO2 und Lautstärke ausgestattet, um die klimatische Umgebung für die Studenten und Professoren auszumessen und eine optimale Umgebung erzeugen zu können. Die Sensorendaten sollen anhand einer Glühbirne (Philips Hue) ausgewertet werden. 
+Die Sensoren als Teil der IoT Architektur sind implementiert, um Zugriff auf Sensordaten zu erhalten. Der Raum 125 am HHZ ist mit Sensoren für die Temperatur, CO2 und Luftfeuchtigkeit ausgestattet, um die klimatische Umgebung für die Studenten und Professoren auszumessen und eine optimale Umgebung erzeugen zu können. Die Sensorendaten sollen anhand einer Glühbirne (Philips Hue) ausgewertet werden. 
 
 Es werden spezielle Ansprüche an IT-Services mit IoT-Ding gestellt. Skalierbarkeit, Stabilität und einfache Wartung sind wichtige Eigenschaften für ein IoT-Ding. Die Steuerung des Farbwertes anhand der Glühbirne soll nur anhand der Sensordaten erfolgen, eine direkte Interaktion mit dem Nutzer soll nicht notwendig sein. Aus diesem Grund sollen nur notwendige und differenzierte Abfragen implementiert werden, um die Glühbirne zu regulieren. Der Nutzer muss klar erkennen, ob die Auswertung der Sensordaten (Farbwerte der Glühbirnenlichts) erfolgreich ist. 
 (Es sollten auch Sicherheitsaspekte berücksichtigt werden, damit raumbezogene Daten nicht manipuliert werden können.)
@@ -81,10 +81,10 @@ Rückmeldung in Farben:
 ## Extension
 Wenn wir noch Zeit haben nach dem MVP:
 Emotionen werden durch ein smiley aus den Sensordaten generiert.
-  -schwitzendes bei hohen temperatur, 
-  -erstickendes bei hohen co2
-  -bei hoher Lautstärke hält er sich die Ohren zu. 
-  -bei niedrigen Temperaturen frierender smiley
+*  -schwitzendes bei hohen temperatur, 
+ * -erstickendes bei hohen co2
+ *-bei hoher Lautstärke hält er sich die Ohren zu. 
+ *-bei niedrigen Temperaturen frierender smiley
   
  Feature: Durch Google Kalender Intergration on/off switch der Lampe bei Raumbelegung und durch Bewegungssensor
  
