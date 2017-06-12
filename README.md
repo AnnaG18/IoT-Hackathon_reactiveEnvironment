@@ -10,13 +10,12 @@
 * value proposition (Anna)
 * Service blueprint (Natascha)
 * Noten gewichtung in to dos umwandeln (Johannes)
-  
- * -Konzeptidee
- * -passende Iot Methode anwenden.
- * -Einordnen in Iot Architektur.
- * -Bezug zum Geschäftlichen Potential herstellen.
- * -ausführliche Verantwortlichkeiten.
-  --
+  * Konzeptidee
+  * passende Iot Methode anwenden.
+  * Einordnen in Iot Architektur.
+  * Bezug zum Geschäftlichen Potential herstellen.
+  * ausführliche Verantwortlichkeiten.
+ 
 ## Table of contents
 
 1. [Project goal](#Project-goal)
@@ -36,9 +35,11 @@ Eine Vorlesung findet im Raum 125 am HHZ statt. Professor und Studenten sind vor
 
 
 ## Project goal
-
-Wir wollen mit unserem Projekt die Lehr-und Lernumgebung von Studenten, Professoren, Mitarbeitern etc am HHZ verbessern.
-Dazu soll IoT zum Einsatz kommen. Mittels Umgebungssensoren sollen relevante Messdaten gesammelt werden. Die Messdaten sollen verarbeitet werden. Durch unsere Lösung wollen wir den Studenten hilfreiche Informationen zum Raum anzeigen. Wir wollen dadurch Bedingungen für eine gute Lernatmosphäre schaffen. Diese wird definiert durch niedrige Lautstärke und angehnehme Temperatur sowie niedrigem cO2 Gehalt. 
+Wir wollen mit unserem Projekt die Lehr- und Lernumgebung von Studenten, Professoren, Mitarbeitern etc. am HHZ verbessern.
+Dazu soll IoT zum Einsatz kommen. Mittels Umgebungssensoren sollen relevante Messdaten gesammelt und verarbeitet werden. Durch unsere Lösung wollen wir den Professoren und Studenten hilfreiche Informationen zum Vorlesungsraum anzeigen. Wir wollen dadurch optimale Bedingungen für eine gute Lernatmosphäre schaffen. Diese wird definiert durch: 
+* angehnehme Temperatur (20°C bis 26°C)
+* niedrigen CO2 Gehalt (unter 1.000ppm)
+* optimale Luftfeuchtigkeit (40% bis 60%)
 
 ## Service Design
 Die Sensoren als Teil der IoT Architektur sind implementiert, um Zugriff auf Sensordaten zu erhalten. Der Raum 125 am HHZ ist mit Sensoren für die Temperatur, CO2 und Luftfeuchtigkeit ausgestattet, um die klimatische Umgebung für die Studenten und Professoren auszumessen und eine optimale Umgebung erzeugen zu können. Die Sensorendaten sollen anhand einer Glühbirne (Philips Hue) ausgewertet werden. 
