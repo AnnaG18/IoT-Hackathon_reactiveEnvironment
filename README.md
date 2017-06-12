@@ -42,6 +42,7 @@ Value Proposition Canvas, Business Model Canvas und Service Blueprint sind unten
 
 ![folie2](https://cloud.githubusercontent.com/assets/22808808/26324694/2215fd78-3f34-11e7-9d0e-6dbe2c55941c.jpg)
 ![folie3](https://cloud.githubusercontent.com/assets/22808808/26324695/224bac02-3f34-11e7-88a8-d603b9dba85f.jpg)
+[Blueprint_2.pdf](https://github.com/AnnaG18/IoT-Hackathon_reactiveEnvironment/files/1068324/Blueprint_2.pdf)
 
 
 ## Organization
