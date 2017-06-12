@@ -3,17 +3,11 @@
 ## ToDo
 * Projekt Name - FarbenFROH - Icon lächelnder Luchs
 
-* Einarbeitung in die verschiedenen Technologien (Peter)
-  * home assistant näher anschauen ob tauglich
-  * eigenes Script für Philips hue näher anschauen.
-* Value proposition (Anna)
-* Service blueprint (Natascha)
-* Noten gewichtung in to dos umwandeln (Johannes)
-  * Konzeptidee
-  * Passende Iot Methode anwenden
-  * Einordnen in Iot Architektur
-  * Bezug zum Geschäftlichen Potential herstellen
-  * Ausführliche Verantwortlichkeiten
+* Konzeptidee
+* Passende Iot Methode anwenden
+* Einordnen in Iot Architektur
+* Bezug zum Geschäftlichen Potential herstellen
+* Ausführliche Verantwortlichkeiten
  
 ## Table of contents
 1. [Project goal](#Project-goal)
@@ -80,7 +74,7 @@ Zusätzliche Informationen:
 
 ## Extension
 Wenn wir noch Zeit haben nach dem MVP:
-Emotionen werden durch ein smiley aus den Sensordaten generiert.
+Emotionen werden durch einen Smiley aus den Sensordaten generiert.
  * schwitzendes Smiley bei hoher Temperatur 
  * frierendes Smiley bei niedriger Temperatur
  * erstickendes Smiley bei hohem CO2-Wert 
@@ -95,7 +89,8 @@ Emotionen werden durch ein smiley aus den Sensordaten generiert.
 * Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
 * Gateway and Sensors: Arduino Nano (xcsource clone)
 * Radio module: NRF24L01+
-* Air/Humidity sensor: DHT-22
+* Temperature/Humidity sensor: DHT11
+* CO2 sensor: MQ135
 
 ## Implementation
 
