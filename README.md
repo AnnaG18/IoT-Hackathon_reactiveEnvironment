@@ -10,8 +10,13 @@
 * value proposition (Anna)
 * Service blueprint (Natascha)
 * Noten gewichtung in to dos umwandeln (Johannes)
-  * Konzeptidee
   
+  -Konzeptidee
+  -passende Iot Methode anwenden.
+  -Einordnen in Iot Architektur.
+  -Bezug zum Geschäftlichen Potential herstellen.
+  -ausführliche Verantwortlichkeiten.
+  --
 ## Table of contents
 
 1. [Project goal](#Project-goal)
