@@ -11,11 +11,11 @@
 * Service blueprint (Natascha)
 * Noten gewichtung in to dos umwandeln (Johannes)
   
-  -Konzeptidee
-  -passende Iot Methode anwenden.
-  -Einordnen in Iot Architektur.
-  -Bezug zum Geschäftlichen Potential herstellen.
-  -ausführliche Verantwortlichkeiten.
+ * -Konzeptidee
+ * -passende Iot Methode anwenden.
+ * -Einordnen in Iot Architektur.
+ * -Bezug zum Geschäftlichen Potential herstellen.
+ * -ausführliche Verantwortlichkeiten.
   --
 ## Table of contents
 
