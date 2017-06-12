@@ -1,23 +1,21 @@
 # IoT-Hackathon
 
 ## ToDo
-
-* Projekt Name - FarbenFROH -Icon lächelnder Luchs
+* Projekt Name - FarbenFROH - Icon lächelnder Luchs
 
 * Einarbeitung in die verschiedenen Technologien (Peter)
   * home assistant näher anschauen ob tauglich
   * Eigenes Script für philiphue näher anschauen.
-* value proposition (Anna)
+* Value proposition (Anna)
 * Service blueprint (Natascha)
 * Noten gewichtung in to dos umwandeln (Johannes)
   * Konzeptidee
-  * passende Iot Methode anwenden.
-  * Einordnen in Iot Architektur.
-  * Bezug zum Geschäftlichen Potential herstellen.
-  * ausführliche Verantwortlichkeiten.
+  * Passende Iot Methode anwenden
+  * Einordnen in Iot Architektur
+  * Bezug zum Geschäftlichen Potential herstellen
+  * Ausführliche Verantwortlichkeiten
  
 ## Table of contents
-
 1. [Project goal](#Project-goal)
 2. [Service Design](#Service-Design)
 3. [Organization](#Organization)
@@ -42,20 +40,17 @@ Dazu soll IoT zum Einsatz kommen. Mittels Umgebungssensoren sollen relevante Mes
 * optimale Luftfeuchtigkeit (40% bis 60%)
 
 ## Service Design
-Die Sensoren als Teil der IoT Architektur sind implementiert, um Zugriff auf Sensordaten zu erhalten. Der Raum 125 am HHZ ist mit Sensoren für die Temperatur, CO2 und Luftfeuchtigkeit ausgestattet, um die klimatische Umgebung für die Studenten und Professoren auszumessen und eine optimale Umgebung erzeugen zu können. Die Sensorendaten sollen anhand einer Glühbirne (Philips Hue) ausgewertet werden. 
+Die Sensoren, als Teil der IoT Architektur, sind implementiert um Zugriff auf Sensordaten zu erhalten. Der Raum 125 am HHZ ist mit Sensoren für Temperatur, CO2 und Luftfeuchtigkeit ausgestattet. Mit diesen Sensoren kann die klimatische Umgebung gemessen werden. Die Sensorendaten werden mit Hilfe von bestimmten Regeln verarbeitet und anhand einer Glühbirne (Philips Hue) dargestellt. Die Farben, die von der Glühbirne angezeigt werden, repräsentieren verschiedene Zustände, wie beispielsweiße zu kalt oder zu warm. 
 
-Es werden spezielle Ansprüche an IT-Services mit IoT-Ding gestellt. Skalierbarkeit, Stabilität und einfache Wartung sind wichtige Eigenschaften für ein IoT-Ding. Die Steuerung des Farbwertes anhand der Glühbirne soll nur anhand der Sensordaten erfolgen, eine direkte Interaktion mit dem Nutzer soll nicht notwendig sein. Aus diesem Grund sollen nur notwendige und differenzierte Abfragen implementiert werden, um die Glühbirne zu regulieren. Der Nutzer muss klar erkennen, ob die Auswertung der Sensordaten (Farbwerte der Glühbirnenlichts) erfolgreich ist. 
+In Verbindung mit einer IoT-Infrastruktur werden spezielle Ansprüche, wie Skalierbarkeit, Stabilität und einfache Wartung an IT-Services gestellt. Die Steuerung des Farbwertes anhand der Glühbirne soll nur anhand der Sensordaten erfolgen. Eine direkte Interaktion mit dem Nutzer soll nicht erforderlich sein. Aus diesem Grund sollen nur notwendige und differenzierte Abfragen implementiert werden, um die Glühbirne zu regulieren. Der Nutzer muss klar erkennen, ob die Auswertung der Sensordaten (Farbwerte des Glühbirnenlichts) erfolgreich ist. 
 (Es sollten auch Sicherheitsaspekte berücksichtigt werden, damit raumbezogene Daten nicht manipuliert werden können.)
 
 Die Value Proposition Canvas und Business Modal Canvas sind unten dargestellt: 
 
-
 ![folie2](https://cloud.githubusercontent.com/assets/22808808/26324694/2215fd78-3f34-11e7-9d0e-6dbe2c55941c.jpg)
 ![folie3](https://cloud.githubusercontent.com/assets/22808808/26324695/224bac02-3f34-11e7-88a8-d603b9dba85f.jpg)
 
-
 ## Organization
-
 Das Team besteht aus folgenden Personen:
 
 * Anna Gorr
@@ -64,35 +59,40 @@ Das Team besteht aus folgenden Personen:
 * Peter Kühfuß
 
 ## MVP
-
-Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie  Sensorknoten, die Temperatur, Co2 gehalt,Lautstärke, im Raum 125 misst, installiert.
+Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie  Sensorknoten, die Temperatur, CO2-Gehalt und Luftfeuchtigkeit im Raum 125 messen, installiert.
 Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einzelnen Komponenten hergestellt wird. Die Umgebungsqualität soll anhand einer Lampe farblich dargestellt werden können.
 
-Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use Cases. Beispielweise könnte ein Use Case die farbliche Änderung einer Glühbirne von rot auf blau sein, wenn die Raumtemperatur von warm auf kalt umschwnenkt. Dazu muss bei der Regelerstellung dann eine Temperaturgrenze definiert werden. Daher ist es wichtig, dass man weiß, welcher Sensor oder welche Komponente welchen Werte rückmeldet.
-Position am besten der Lampe in einer Ecke damit man das Licht gut erkennen kann.
-Rückmeldung in Farben:
-  Die stärke des jeweiligen Zustands wird durch Helligkeit ausgedrückt.
-  Verschiedene Zustände werden nach einander wiederholt. Übergänge/interpolieren?
-  Grün alles ok standardmäßig.
-  Temperatur Blau-zukalt,  Rot-zuheiß
-  Co2 gehalt viel c02-lila 
-  Lautstärke zulaut-orange
+Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use Cases. Beispielsweise könnte ein Use Case die farbliche Änderung einer Glühbirne auf blau sein, wenn die Raumtemperatur zu kalt ist. Dazu muss bei der Regelerstellung eine Temperaturgrenze definiert werden. Daher ist es wichtig, dass man weiß, welcher Sensor oder welche Komponente welchen Werte rückmeldet.
 
+Rückmeldung in Farben:
+  Temperatur
+  * zu kalt:    < 20°C     -> blau
+  * zu warm:    > 26°C     -> rot
+  Luftfeuchtigkeit
+  * zu niedrig: < 40%      -> gelb
+  * zu hoch:    > 60%      -> grün
+  CO2-Gehalt
+  * zu hoch:    > 1.000ppm -> lila
+
+Zusätzliche Informationen:
+* Bei Normal- bzw Optimalzustand leuchtet die Lampe weiß
+* Die Stärke des jeweiligen Zustands wird durch Helligkeit/Intensität der Farbe ausgedrückt
+* Verschiedene Zustände werden nacheinander wiederholt. Die Übergänge werden ähnlich einem Herzschlag dargestellt.
 
 ## Extension
 Wenn wir noch Zeit haben nach dem MVP:
 Emotionen werden durch ein smiley aus den Sensordaten generiert.
-*  -schwitzendes bei hohen temperatur, 
- * -erstickendes bei hohen co2
- *-bei hoher Lautstärke hält er sich die Ohren zu. 
- *-bei niedrigen Temperaturen frierender smiley
+ * schwitzendes Smiley bei hoher Temperatur 
+ * frierendes Smiley bei niedriger Temperatur
+ * erstickendes Smiley bei hohem CO2-Wert 
+ * ?Dschungel/Affe/Löwe/...? bei hoher Luftfeuchtigkeit
+ * ?Wüste/Pyramide/Kamel/...? bei niedriger Luftfeuchtigkeit
   
  Feature: Durch Google Kalender Intergration on/off switch der Lampe bei Raumbelegung und durch Bewegungssensor
  
 ## Architecture
 
 ### Used hardware
-
 * Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
 * Gateway and Sensors: Arduino Nano (xcsource clone)
 * Radio module: NRF24L01+
@@ -103,7 +103,6 @@ Emotionen werden durch ein smiley aus den Sensordaten generiert.
 ## IoT Methods
 
 ### IoT Design Principles
-
 Designing an IoT architecture we followed the design principles stated in the IoT lecture:
 
 * Invisibility: The sensor network is not visible and no user interaction is needed.
