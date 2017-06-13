@@ -119,16 +119,15 @@ def maxBright(value):
         value = 1
     return value
 
-#Logging function
-#def logging(name):
-#    print (name + " : " + str(time.ctime()))
-
+#Default values
 values = {'temp_min':False,'temp_max':False,'temp_bright':0,'hum_min':False,'hum_max':False,'hum_bright':0,'Co2_max':False,'Co2_bright':0}
 
 #Permament loop
 run = True
 while run:
+    #Variable to show that no value is out of bounderies
     goodRoom = True
+    #Get average temperature from sensors
     tempAvg = getStateAvg(api, temperature_ids)
     if tempAvg < int(Config.get('Sectors', 'Temp_Min')):
         values['temp_bright'] = maxBright((tempAvg - int(Config.get('Sectors', 'Temp_Min'))) * -10)
@@ -148,7 +147,8 @@ while run:
         values['temp_min'] = False
         values['temp_max'] = False
         logging.info("Temp;Normal;0")
-
+    
+    #Get average humidity from sensors
     humAvg = getStateAvg(api, humidity_ids)
     if humAvg < int(Config.get('Sectors', 'Hum_Min')):
         values['hum_bright'] = maxBright((humAvg - int(Config.get('Sectors', 'Hum_Min'))) * -5)
@@ -169,6 +169,7 @@ while run:
         values['hum_max'] = False
         logging.info("Hum;Normal;0")
 
+    #Get average Co2 value from sensors
     Co2Avg =  getStateAvg(api, co2_ids)
     if Co2Avg > int(Config.get('Sectors', 'Co2_Max')):
         values['Co2_bright'] = maxBright((Co2Avg - int(Config.get('Sectors', 'Co2_Max'))) * 0.1)
@@ -180,4 +181,7 @@ while run:
         logging.info("Co2;Normal;0")
 
     logging.debug(values)
+    
+    #Set lights calculated by the average values
     setLightColor(api, values)
+
