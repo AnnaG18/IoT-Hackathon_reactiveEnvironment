@@ -175,4 +175,6 @@ Beispiele für Smileys in unserem Szenario sind:
  * zu hohe Luftfeuchtigkeit: Dschungel/Affe/Löwe/...
  * zu niedrige Luftfeuchtigkeit: Wüste/Pyramide/Kamel/...
  
+Ein weiteres Feature könnte eine Google Kalender Integration darstellen. Mit Hilfe des Stundenplans schaltet sich die Lampe zu Beginn der Vorlesung ein und zum Ende der Vorlesung ausn. Genauso könnte abgefragt werden, ob an diesem Tag überhaupt eine Vorlesung statt findet (ohne Bezug zur Länge der Vorlesung) und wenn ja, schaltet sich die Lampe anhand der Öffnungszeiten des HHZ ein und wieder aus.
+ 
 ## Präsentation
