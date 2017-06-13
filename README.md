@@ -16,15 +16,26 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
 * Code Kommentieren
  
 ## Inhaltsverzeichnis
-1. [Project goal](#Project-goal)
-2. [Service Design](#Service-Design)
-3. [Organization](#Organization)
-4. [MVP](#MVP)
-5. [Architecture](#Architecture)
-6. [Implementation](#Implementation)
-7. [IoT-Methods](#IoT-Methods)
-8. [Outlook](#Outlook)
-9. [Presentation](#Presentation)
+1. [Konzeption](#Konzeption)
+  1.1 [Anwendungsidee - Use Case](#Anwendungsidee - Use Case)
+  1.2 [Projektziel](#Projektziel)
+  1.3 [Service Design](#Service Design)
+2. [Organization](#Organization)
+  2.1 [Teammitglieder](#Teammitglieder)
+  2.2 [Verantwortlichkeiten](#Verantwortlichkeiten)
+  2.3 [Vorgehen](#Vorgehen)
+3. [Implementation](#Implementation)
+  3.1 [MVP](#MVP)
+  3.2 [Erweiterung](#Erweiterung)
+  3.3 [Architektur](#Architektur)
+  3.4 [Geschäftliche Relevanz](#Geschäftliche Relevanz)
+    3.4.1 [HHZ](#HHZ)
+    3.4.2 [Firmen](#Firmen)
+  3.5 [Verwendete Hardware](#Verwendete Hardware)
+4. [IoT-Methoden](#IoT-Methoden)
+  4.1 [Design Prinzipien](#Design Prinzipien)
+5. [Ausblick](#Ausblick)
+6. [Präsentation](#Präsentation)
 
 ## Konzeption
 ### Anwendungsidee - Use Case
