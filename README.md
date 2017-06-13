@@ -108,6 +108,9 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
  Feature: Durch Google Kalender Intergration on/off switch der Lampe bei Raumbelegung und durch Bewegungssensor
  
 ### Architektur
+
+![iot-aufbau](https://user-images.githubusercontent.com/22808808/27073909-c7c093a8-5025-11e7-9019-df2dca6f7e7d.jpg)
+
 Unsere Netzwerk-Topologie besteht aus Sensoren, Gateway, Philips Hue Lampe und Controller. Sensoren existieren zu Luftfeuchtigkeit, CO2-Gehalt und Temperatur; sie gelten als Smart Objects. Sie senden die Information zu einem Gateway, dieser wiederum gibt die Daten an den Controller weiter. 
 Über die Python API der Home Assistant Plattform wird unser Skript farbenFROH angebunden. Dieser liest Sensordaten aus und ruft den light Service auf. Auf diese Weise kann der Status der Lampe verändert werden. Je nach eingegangen Daten verändert die Lampe Philips Hue ihre Farbe.
 
