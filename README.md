@@ -16,6 +16,8 @@
   * Einordnen in IoT Architektur
   * Bezug zum Geschäftlichen Potential herstellen
 * Logging von Daten
+* Überschriften übersetzen
+* Code Kommentieren
  
 ## Table of contents
 1. [Project goal](#Project-goal)
