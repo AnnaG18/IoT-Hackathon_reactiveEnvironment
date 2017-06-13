@@ -166,13 +166,13 @@ Der Nutzer nimmt nur die Lampe wahr und dadurch wird diese als Zentrum der Logik
 Das passt perfekt auf das Unsichtbarkeitsprinzip, womit Komplexität vor dem Nutzer verschleiert wird.
 
 ## Ausblick
-Emotionen werden durch einen Smiley aus den Sensordaten generiert.
- * schwitzendes Smiley bei hoher Temperatur 
- * frierendes Smiley bei niedriger Temperatur
- * erstickendes Smiley bei hohem CO2-Wert 
- * ?Dschungel/Affe/Löwe/...? bei hoher Luftfeuchtigkeit
- * ?Wüste/Pyramide/Kamel/...? bei niedriger Luftfeuchtigkeit
-  
- Feature: Durch Google Kalender Intergration on/off switch der Lampe bei Raumbelegung und durch Bewegungssensor
+Statt der Darstellung der Zustände mit verschiedenen Farben, könnte unser Szenario auch mit Smileys oder anderen Bildern umgesetzt werden. Emotionen wie schwitzen oder frieren, können gut durch Smileys ausgedrückt werden. Dazu würde eine Anzeigefläche benötigt werden. Ein Tablet pro Raum oder eine Übertragung auf die einzelnen Smartphones der Professoren und Studenten würde sich für dieses Realisierung eignen. Ein Webservice, der die Smileys darstellt, kann von Tablet oder Smartphone aufgerufen werden. 
+
+Beispiele für Smileys in unserem Szenario sind:
+ * zu hohe Temperatur: schwitzendes Smiley/Sonne/...  
+ * zu niedrige Temperatur: frierendes Smiley/Eiskristall/...
+ * zu hoher CO2-Wert: erstickendes Smiley/Co2-Warntafel/... 
+ * zu hohe Luftfeuchtigkeit: Dschungel/Affe/Löwe/...
+ * zu niedrige Luftfeuchtigkeit: Wüste/Pyramide/Kamel/...
  
 ## Präsentation
