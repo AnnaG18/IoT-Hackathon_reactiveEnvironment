@@ -3,10 +3,7 @@
 Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, das die Qualität der Lehr- und Lernumgebung verbessern soll. Mit Hilfe einer Lampe kann, anhand von verschiedene Farben, der Gehalt von CO2 oder die aktuelle Raumtemperatur dargestellt werden. Da die Lampe den Momentanzustand anzeigt, kann durch eine sofortige Reaktion der Studenten oder des Professors, beispielsweise mit Lüften des Klassenraums oder Einlegen einer kurzen Pause, die Qualität der Lehr- und Lernumbegung sogleich verbessert werden.
 
 ## ToDo
-* Einleitungstext
 * Vorgehen
-  * Systematische Durchführung
-  * Verantwortlichkeiten
   * Implementierung
   * Präsentation
   * Demo
@@ -16,10 +13,9 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
   * Einordnen in IoT Architektur
   * Bezug zum Geschäftlichen Potential herstellen
 * Logging von Daten
-* Überschriften übersetzen
 * Code Kommentieren
  
-## Table of contents
+## Inhaltsverzeichnis
 1. [Project goal](#Project-goal)
 2. [Service Design](#Service-Design)
 3. [Organization](#Organization)
@@ -31,11 +27,10 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
 9. [Presentation](#Presentation)
 
 ## Konzeption
-
 ### Anwendungsidee - Use Case
 Eine Vorlesung findet im Raum 125 am HHZ statt. Professor und Studenten sind vor Ort. Nach einigen Stunden ist die Luftqualität schlechter geworden. Die PhilipsHue Lampe zeigt diesen Zustand durch eine lila Farbe an. Dadurch werden die Anwesenden auf die schlechte Luft aufmerksam gemacht.
 
-### Project goal
+### Projektziel
 Wir wollen mit unserem Projekt die Lehr- und Lernumgebung von Studenten, Professoren, Mitarbeitern etc. am HHZ verbessern.
 Dazu soll IoT zum Einsatz kommen. Mittels Umgebungssensoren sollen relevante Messdaten gesammelt und verarbeitet werden. Durch unsere Lösung wollen wir den Professoren und Studenten hilfreiche Informationen zum Vorlesungsraum anzeigen. Wir wollen dadurch optimale Bedingungen für eine gute Lernatmosphäre schaffen. Diese wird definiert durch: 
 * angehnehme Temperatur (20°C bis 26°C)
@@ -57,9 +52,7 @@ Value Proposition Canvas:
 Service Blueprint:
 ![service blueprint](https://user-images.githubusercontent.com/28348801/27036723-0d95580a-4f86-11e7-936c-0126c50e8e5f.jpg)
 
-
-## Organization
-
+## Organisation
 ### Teammitglieder
 Das Team besteht aus folgenden Personen:
 
@@ -79,7 +72,6 @@ Erklärung zu unserer Arbeitstechnik:
 https://www.it-agile.de/wissen/agiles-engineering/pair-programming/
 
 ## Implementation
-
 ### MVP
 Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie  Sensorknoten, die Temperatur, CO2-Gehalt und Luftfeuchtigkeit im Raum 125 messen, installiert.
 Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einzelnen Komponenten hergestellt wird. Die Umgebungsqualität soll anhand einer Lampe farblich dargestellt werden können.
@@ -115,7 +107,7 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
   
  Feature: Durch Google Kalender Intergration on/off switch der Lampe bei Raumbelegung und durch Bewegungssensor
  
-### Architekture
+### Architektur
 
 ### Geschäftliche Relevanz
 #### HHZ
@@ -125,22 +117,21 @@ Den gerade wenn viele Menschen in einem Raum sind, passiert es oft das die Raumq
 #### Firmen
 Auch in Firemen tritt das Problem auf, nur das es sicht dort auf die Arbeitsleitung der Mitarbeiter auswirkt.
 
-### Used hardware
+### Verwendete Hardware
 * Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
 * Gateway and Sensors: Arduino Nano (xcsource clone)
 * Radio module: NRF24L01+
 * Temperature/Humidity sensor: DHT11
 * CO2 sensor: MQ135
 
-## IoT Methods
-
-### IoT Design Principles
+## IoT Methoden
+### IoT Design Prinzipien
 Designing an IoT architecture we followed the design principles stated in the IoT lecture:
 
 * Invisibility: The sensor network is not visible and no user interaction is needed.
 * Manual override: A manual override is neither applicable nor necessary in this case.
 * Feedback: Sensor data can be monitored using the web UI or visuell Feedback.
 
-## Outlook
+## Ausblick
 
-## Presentation
+## Präsentation
