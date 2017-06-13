@@ -111,11 +111,11 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
 
 ### Geschäftliche Relevanz
 #### HHZ
-FarbenFroh ermöglicht eine optimale Lern- und Projektumgebung für Studierende und Dozenten zu schaffen.
-Den gerade wenn viele Menschen in einem Raum sind, passiert es oft das die Raumqualität zunehmender schlechter wird, dies aber von niemandem wahrgenommen wird. Dies soll verhindert werden in dem durch visuelle rückmeldung mitgeteilt wird, welche Grenzwerte im Raum überschritten sind und das etwas unternommen werden sollte. 
+FarbenFroh ermöglicht es eine optimale Lern- und Projektumgebung für Studierende und Dozenten zu schaffen.
+Sind viele Menschen in einem Raum, wird oftmals die Raumqualität zunehmender schlechter. Dies wird jedoch in den seltensten Fällen wahrgenommen. Um einen solchen Zustand zu verhinden, wird durch eine visuelle Rückmeldung mitgeteilt, welche Grenzwerte im Raum überschritten sind. Daraufhin kann je nach angezeigtem Zustand entsprechend reagiert werden. 
 
 #### Firmen
-Auch in Firemen tritt das Problem auf, nur das es sicht dort auf die Arbeitsleitung der Mitarbeiter auswirkt.
+Auch in Firmen tritt das genannte Problem auf. Dort wirkt es sich jedoch auf die Arbeitsleistung der Mitarbeiter aus. Durch die Umsetzung unseres Szenarios im Unternehmen kann die Konzentration, durch dynamisch den Raumwerten angepasstem Verhalten (lüften, Pause machen), verbessert werden. Dadurch kann effizienter gearbeitet werden. 
 
 ### Verwendete Hardware
 * Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
