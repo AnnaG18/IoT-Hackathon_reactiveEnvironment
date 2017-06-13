@@ -147,7 +147,7 @@ while run:
         values['temp_min'] = False
         values['temp_max'] = False
         logging.info("Temp;Normal;0")
-    
+
     #Get average humidity from sensors
     humAvg = getStateAvg(api, humidity_ids)
     if humAvg < int(Config.get('Sectors', 'Hum_Min')):
@@ -181,7 +181,7 @@ while run:
         logging.info("Co2;Normal;0")
 
     logging.debug(values)
-    
+
     #Set lights calculated by the average values
     setLightColor(api, values)
 
