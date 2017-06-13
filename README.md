@@ -72,9 +72,14 @@ Das Team besteht aus folgenden Personen:
 
 
 ### Vorgehen
-Pairprogramming
+Um die Qualität des sicherzustellen haben wir Pairprogramming angewendet.
 
-## MVP
+"Pair Programming oder Programmieren in Paaren ist eine zentrale Technik aus dem eXtreme Programming (XP). Beim Pair Programming sitzen zwei Entwickler gleichberechtigt an einem Rechner und arbeiten gemeinsam an einer Aufgabe. Die zwei Entwickler nehmen unterschiedliche Rollen ein, welche oft mit „Pilot“ und „Navigator“ bezeichnet werden. Der „Pilot“ schreibt den Code, während der „Navigator“ die Korrektheit des Codes und des Lösungsansatzes überwacht und parallel über Verbesserungen am Design nachdenkt. Weil beide Entwickler gleichberechtigt sind, gibt es keine feste Aufgabenteilung."
+https://www.it-agile.de/wissen/agiles-engineering/pair-programming/
+
+## Implementation
+
+### MVP
 Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie  Sensorknoten, die Temperatur, CO2-Gehalt und Luftfeuchtigkeit im Raum 125 messen, installiert.
 Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einzelnen Komponenten hergestellt wird. Die Umgebungsqualität soll anhand einer Lampe farblich dargestellt werden können.
 
@@ -95,7 +100,7 @@ Zusätzliche Informationen:
 * Die Stärke des jeweiligen Zustands wird durch Helligkeit/Intensität der Farbe ausgedrückt
 * Verschiedene Zustände werden nacheinander wiederholt. Die Übergänge werden ähnlich einem Herzschlag dargestellt.
 
-## Extension
+### Erweiterung
 Wenn wir noch Zeit haben nach dem MVP:
 
 Statusänderungen in Log speichern zur erstellung von Berichten.
@@ -109,7 +114,9 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
   
  Feature: Durch Google Kalender Intergration on/off switch der Lampe bei Raumbelegung und durch Bewegungssensor
  
-## Architecture
+### Architekture
+
+### Geschäftliche Relevanz
 
 ### Used hardware
 * Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
@@ -117,8 +124,6 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
 * Radio module: NRF24L01+
 * Temperature/Humidity sensor: DHT11
 * CO2 sensor: MQ135
-
-## Implementation
 
 ## IoT Methods
 
