@@ -174,7 +174,8 @@ Genauso wenn die Temperatur zu kalt ist soll die Lampe Blau werden.
 
 * Manual override: A manual override is neither applicable nor necessary in this case.
 Dank einem physikalischen Schalter an der Hue Lampe haben wir kein Problem das dem Nutzer seine Aktion nicht ausgeführt wird.
-Die Priorisierung von unseren Zuständen im Verhältnis zu Manuellem bedienen sind nicht voneinander abhängig, denn der Schalter hat dank Kontrolle über die Stromzufuhr immer oberste Priorität.
+Die Priorisierung von unseren Zuständen im Verhältnis zu Manuellem bedienen sind nicht voneinander abhängig,
+denn der Schalter hat dank Kontrolle über die Stromzufuhr immer oberste Priorität.
 
 * Invisibility: The sensor network is not visible and no user interaction is needed.
 Dadurch, dass unsere Applikationen keine Daten von dem Nutzer benötigt benötigen wir keine separate benutzerfreundliche Schnittstelle.
