@@ -141,10 +141,11 @@ https://www.it-agile.de/wissen/agiles-engineering/pair-programming/
 
 ## Living Lab
 
-Wir nutzten das Living Lab welches mittels einer Sensorumgebung uns einen einfachen Weg bereitstellte um Home Assistant anzusprechen. 
-Living Lab bedeutet, dass wir vorhandene Infrastruktur bereitgestellte bekommen.
-Während unseres Entwicklungsprozesses ist unsere Infrastruktur Dynamisch anpassbar und an wird unsere Bedürfnisse angepasst wird.
-Je nach Realisierbarkeit werden . 
+Ein Living Lab ist eine unstetige Umgebung, in unserem Fall eine Sensor- und Aktorumgebung. 
+In dieser Umgebung wird uns Infrastruktur bereitstellt. 
+Wir nutzten das Living Lab womit uns ein einfacher Weg bereitgestellt wurde um Home Assistant anzusprechen.
+Während unseres Entwicklungsprozesses ist unsere Infrastruktur dynamisch anpassbar und wird je nach Realisierbarkeit unseren
+Bedürfnissen angepasst.
 
 ### IoT Design Prinzipien
 Bei der Konzeptionierung von IoT Architektur folgten wir folgenden Design Prinzipien aus der IoT Vorlesung:
