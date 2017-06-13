@@ -1,6 +1,6 @@
 # IoT-Hackathon
 ![logo](https://user-images.githubusercontent.com/28348801/27071192-2f2907dc-501c-11e7-970b-594abed77fc0.jpg)
-Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, das die Qualität der Lehr- und Lernumgebung verbessern soll. Mit Hilfe einer Lampe kann, anhand von verschiedene Farben, der Gehalt von CO2 oder die aktuelle Raumtemperatur dargestellt werden. Da die Lampe den Momentanzustand anzeigt, kann durch eine sofortige Reaktion der Studenten oder des Professors, beispielsweise mit Lüften des Klassenraums oder Einlegen einer kurzen Pause, die Qualität der Lehr- und Lernumbegung sogleich verbessert werden.
+Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, das die Qualität der Lehr- und Lernumgebung verbessern soll. Mit Hilfe einer Lampe kann, anhand von verschiedene Farben, der Gehalt von CO2 oder die aktuelle Raumtemperatur dargestellt werden. Da die Lampe den Istzustand anzeigt, kann durch eine sofortige Reaktion der Studenten oder des Professors, beispielsweise mit Lüften des Klassenraums oder Einlegen einer kurzen Pause, die Qualität der Lehr- und Lernumgebung sogleich verbessert werden.
 
 ## ToDo
 * Vorgehen
@@ -73,16 +73,16 @@ Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use C
 
 Rückmeldung in Farben:
 * Temperatur
-  * zu kalt:    < 20°C     -> blau
-  * zu warm:    > 26°C     -> rot
+  * zu kalt:    < 20°C     -> Blau
+  * zu warm:    > 26°C     -> Rot
 * Luftfeuchtigkeit
-  * zu niedrig: < 40%      -> gelb
-  * zu hoch:    > 60%      -> grün
+  * zu niedrig: < 40%      -> Gelb
+  * zu hoch:    > 60%      -> Grün
 * CO2-Gehalt
-  * zu hoch:    > 1.000ppm -> lila
+  * zu hoch:    > 1.000ppm -> Lila
 
 Zusätzliche Informationen:
-Bei Normal- bzw Optimalzustand leuchtet die Lampe weiß. Die Stärke des jeweiligen Zustands wird durch Helligkeit/Intensität der Farbe ausgedrückt. Hat die Lampe beispielsweiße den Wert 'Temperatur zu niedrig', dann wird die Farbe blau angezeigt. Dies wird durch ein langsames Blinken verdeutlicht. Das heißt, die Lampe wechselt von sehr hellem blau in dunktleres, intensiveres blau und wieder zurück in helles blau. Ist der Bereich der Optimaltemperatur nur um 1°C unterschritten, wird dies durch einen Wechsel von einem sehr hellen blau in ein nur wenig dunkleres blau dargestellt. Dabei spielt die Länge der anzuzeigenden Farbe ebenfalls eine Rolle. Die Lampe braucht länger um von sehr hell in sehr dunkel, als von sehr hell in nur wenig dunkler zu wechseln. Dies wird erst deutlich, wenn mindestens zwei Werte nicht im Optimalbereich liegen. In diesem Fall wechseln sich die Farben ab. Wird eine Farbe länger und farbintensiver angezeigt, als die andere, ist deutlich erkennbar, dass diese weiter vom Optimalbereich entfernt ist als die andere.
+Bei Normal- bzw Optimalzustand leuchtet die Lampe weiß. Die Stärke des jeweiligen Zustands wird durch Helligkeit/Intensität der Farbe ausgedrückt. Hat die Lampe beispielsweiße den Wert 'Temperatur zu niedrig', dann wird die Farbe Blau angezeigt. Dies wird durch ein langsames Blinken verdeutlicht. Das heißt, die Lampe wechselt von sehr hellem Blau in dunkleres, intensiveres Blau und wieder zurück in helles Blau. Ist der Bereich der Optimaltemperatur nur um 1°C unterschritten, wird dies durch einen Wechsel von einem sehr hellen Blau in ein nur wenig dunkleres Blau dargestellt. Dabei spielt die Länge der anzuzeigenden Farbe ebenfalls eine Rolle. Die Lampe braucht länger um von sehr hell in sehr dunkel, als von sehr hell in nur wenig dunkler zu wechseln. Dies wird erst deutlich, wenn mindestens zwei Werte nicht im Optimalbereich liegen. In diesem Fall wechseln sich die Farben ab. Wird eine Farbe länger und farbintensiver angezeigt, als die andere, ist deutlich erkennbar, dass diese weiter vom Optimalbereich entfernt ist als die andere.
 
 ### Erweiterung
 Nach der kompletten Fertigstellung bzw. Umsetzung unseres MVP hatten wir noch eine Idee. Die Idee war eine Logging-Datei um die Werte später besser auslesen zu können. Außerdem hilft die Datei  einen besseren Einblick in die Statusänderungen zwischen den Zuständen zu bekommen. Hier werden alle Zustandsänderung, wie beispielsweise 'Optimalzustand erreicht', 'Temperatur zu niedrig', 'Luftfeuchtigkeit zu hoch', usw. festgehalten.
@@ -107,7 +107,7 @@ Vorteile von Home Assistant:
 ### Geschäftliche Relevanz
 #### HHZ
 FarbenFroh ermöglicht es eine optimale Lern- und Projektumgebung für Studierende und Dozenten zu schaffen.
-Sind viele Menschen in einem Raum, wird oftmals die Raumqualität zunehmender schlechter. Dies wird jedoch in den seltensten Fällen wahrgenommen. Um einen solchen Zustand zu verhinden, wird durch eine visuelle Rückmeldung mitgeteilt, welche Grenzwerte im Raum überschritten sind. Daraufhin kann je nach angezeigtem Zustand entsprechend reagiert werden. 
+Sind viele Menschen in einem Raum, wird oftmals die Raumqualität zunehmender schlechter. Dies wird jedoch in den seltensten Fällen wahrgenommen. Um einen solchen Zustand zu verhindern, wird durch eine visuelle Rückmeldung mitgeteilt, welche Grenzwerte im Raum überschritten sind. Daraufhin kann je nach angezeigtem Zustand entsprechend reagiert werden. 
 
 #### Firmen
 Auch in Firmen tritt das genannte Problem auf. Dort wirkt es sich jedoch auf die Arbeitsleistung der Mitarbeiter aus. Durch die Umsetzung unseres Szenarios im Unternehmen kann die Konzentration, durch dynamisch den Raumwerten angepasstem Verhalten (lüften, Pause machen), verbessert werden. Dadurch kann effizienter gearbeitet werden. 
@@ -175,6 +175,6 @@ Beispiele für Smileys in unserem Szenario sind:
  * zu hohe Luftfeuchtigkeit: Dschungel/Affe/Löwe/...
  * zu niedrige Luftfeuchtigkeit: Wüste/Pyramide/Kamel/...
  
-Ein weiteres Feature könnte eine Google Kalender Integration darstellen. Mit Hilfe des Stundenplans schaltet sich die Lampe zu Beginn der Vorlesung ein und zum Ende der Vorlesung ausn. Genauso könnte abgefragt werden, ob an diesem Tag überhaupt eine Vorlesung statt findet (ohne Bezug zur Länge der Vorlesung) und wenn ja, schaltet sich die Lampe anhand der Öffnungszeiten des HHZ ein und wieder aus.
- 
+Ein weiteres Feature könnte eine Google Kalender Integration darstellen. Mit Hilfe des Stundenplans schaltet sich die Lampe zu Beginn der Vorlesung ein und zum Ende der Vorlesung aus. Genauso könnte abgefragt werden, ob an diesem Tag überhaupt eine Vorlesung stattfindet (ohne Bezug zur Länge der Vorlesung) und wenn ja, schaltet sich die Lampe anhand der Öffnungszeiten des HHZ ein und wieder aus.
+
 ## Präsentation
