@@ -117,6 +117,12 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
 ### Architekture
 
 ### Geschäftliche Relevanz
+#### HHZ
+FarbenFroh ermöglicht eine optimale Lern- und Projektumgebung für Studierende und Dozenten zu schaffen.
+Den gerade wenn viele Menschen in einem Raum sind, passiert es oft das die Raumqualität zunehmender schlechter wird, dies aber von niemandem wahrgenommen wird. Dies soll verhindert werden in dem durch visuelle rückmeldung mitgeteilt wird, welche Grenzwerte im Raum überschritten sind und das etwas unternommen werden sollte. 
+
+#### Firmen
+Auch in Firemen tritt das Problem auf, nur das es sicht dort auf die Arbeitsleitung der Mitarbeiter auswirkt.
 
 ### Used hardware
 * Controller: Raspberry Pi 3 running Home-Assistant (0.35.3) on Raspbian Jessie Lite (Kernel 4.4)
