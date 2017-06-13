@@ -1,11 +1,12 @@
 # IoT-Hackathon
 
+
+
 ## ToDo
-* Projekt Name - FarbenFROH - Icon lächelnder Luchs
+* Einleitungstext
 * Vorgehen
   * Systematische Durchführung
   * Verantwortlichkeiten
-  * Konzeptidee
   * Implementierung
   * Präsentation
   * Demo
@@ -14,6 +15,7 @@
   * Iot Entwurfsmethode
   * Einordnen in IoT Architektur
   * Bezug zum Geschäftlichen Potential herstellen
+* Logging von Daten
  
 ## Table of contents
 1. [Project goal](#Project-goal)
@@ -26,19 +28,19 @@
 8. [Outlook](#Outlook)
 9. [Presentation](#Presentation)
 
-## Anwendungsidee - Use Case
-Eine Vorlesung findet im Raum 125 am HHZ statt. Professor und Studenten sind vor Ort. Nach einigen Stunden ist die Luftqualität schlechter geworden. Die PhilipsHue Lampe zeigt diesen Zustand durch eine lila Farbe an. Dadurch werden die Anwesenden auf die schlechte Luft aufmerksam gemacht.
-
 ## Konzeption
 
-## Project goal
+### Anwendungsidee - Use Case
+Eine Vorlesung findet im Raum 125 am HHZ statt. Professor und Studenten sind vor Ort. Nach einigen Stunden ist die Luftqualität schlechter geworden. Die PhilipsHue Lampe zeigt diesen Zustand durch eine lila Farbe an. Dadurch werden die Anwesenden auf die schlechte Luft aufmerksam gemacht.
+
+### Project goal
 Wir wollen mit unserem Projekt die Lehr- und Lernumgebung von Studenten, Professoren, Mitarbeitern etc. am HHZ verbessern.
 Dazu soll IoT zum Einsatz kommen. Mittels Umgebungssensoren sollen relevante Messdaten gesammelt und verarbeitet werden. Durch unsere Lösung wollen wir den Professoren und Studenten hilfreiche Informationen zum Vorlesungsraum anzeigen. Wir wollen dadurch optimale Bedingungen für eine gute Lernatmosphäre schaffen. Diese wird definiert durch: 
 * angehnehme Temperatur (20°C bis 26°C)
 * niedrigen CO2 Gehalt (unter 1.000ppm)
 * optimale Luftfeuchtigkeit (40% bis 60%)
 
-## Service Design
+### Service Design
 Die Sensoren, als Teil der IoT Architektur, sind implementiert um Zugriff auf Sensordaten zu erhalten. Der Raum 125 am HHZ ist mit Sensoren für Temperatur, CO2 und Luftfeuchtigkeit ausgestattet. Mit diesen Sensoren kann die klimatische Umgebung gemessen werden. Die Sensorendaten werden mit Hilfe von bestimmten Regeln verarbeitet und anhand einer Glühbirne (Philips Hue) dargestellt. Die Farben, die von der Glühbirne angezeigt werden, repräsentieren verschiedene Zustände, wie beispielsweiße zu kalt oder zu warm. 
 
 In Verbindung mit einer IoT-Infrastruktur werden spezielle Ansprüche, wie Skalierbarkeit, Stabilität und einfache Wartung an IT-Services gestellt. Die Steuerung des Farbwertes anhand der Glühbirne soll nur anhand der Sensordaten erfolgen. Eine direkte Interaktion mit dem Nutzer soll nicht erforderlich sein. Aus diesem Grund sollen nur notwendige und differenzierte Abfragen implementiert werden, um die Glühbirne zu regulieren. Der Nutzer muss klar erkennen, ob die Auswertung der Sensordaten (Farbwerte des Glühbirnenlichts) erfolgreich ist. 
@@ -55,12 +57,20 @@ Service Blueprint:
 
 
 ## Organization
+
+### Teammitglieder
 Das Team besteht aus folgenden Personen:
 
 * Anna Gorr
 * Johannes Wanner
 * Natascha Sigle
 * Peter Kühfuß
+
+### Verantwortlichkeiten
+
+
+### Vorgehen
+Pairprogramming
 
 ## MVP
 Nach der teilweisen Implementierung des Service Design wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie  Sensorknoten, die Temperatur, CO2-Gehalt und Luftfeuchtigkeit im Raum 125 messen, installiert.
@@ -85,6 +95,9 @@ Zusätzliche Informationen:
 
 ## Extension
 Wenn wir noch Zeit haben nach dem MVP:
+
+Statusänderungen in Log speichern zur erstellung von Berichten.
+
 Emotionen werden durch einen Smiley aus den Sensordaten generiert.
  * schwitzendes Smiley bei hoher Temperatur 
  * frierendes Smiley bei niedriger Temperatur
