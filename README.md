@@ -12,6 +12,7 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
   * Iot Entwurfsmethode
   * Einordnen in IoT Architektur
   * Bezug zum Geschäftlichen Potential herstellen
+  * gesamte Readme in Word einfügen um rechtschreibprüfung zu nutzen.
 * Logging von Daten
 * Code Kommentieren
  
@@ -142,12 +143,31 @@ Auch in Firmen tritt das genannte Problem auf. Dort wirkt es sich jedoch auf die
 * CO2 sensor: MQ135
 
 ## IoT Methoden
+
+## Living Lab
+
+Wir nutzten das Living Lab welches mittels einer Sensorumgebung uns einen einfachen Weg bereitstellte um Home Assistant anzusprechen. 
+Living Lab bedeutet, dass wir vorhandene Infrastruktur bereitgestellte bekommen.
+Während unseres Entwicklungsprozesses ist unsere Infrastruktur Dynamisch anpassbar und an wird unsere Bedürfnisse angepasst wird.
+Je nach Realisierbarkeit werden . 
+
 ### IoT Design Prinzipien
 Designing an IoT architecture we followed the design principles stated in the IoT lecture:
 
-* Invisibility: The sensor network is not visible and no user interaction is needed.
-* Manual override: A manual override is neither applicable nor necessary in this case.
 * Feedback: Sensor data can be monitored using the web UI or visuell Feedback.
+Das Feedback unserer Applikation ist verbesserungswürdig, da die Farbwerte erst dem Nutzer erklärt werden muss.
+Wir haben aber versucht offensichtliche Assoziationen zu verwenden. 
+Der Zustand zu heiß wird durch die rote Farbe angezeigt.
+Genauso wenn die Temperatur zu kalt ist soll die Lampe Blau werden.
+
+* Manual override: A manual override is neither applicable nor necessary in this case.
+Dank einem physikalischen Schalter an der Hue Lampe haben wir kein Problem das dem Nutzer seine Aktion nicht ausgeführt wird.
+Die Priorisierung von unseren Zuständen im Verhältnis zu Manuellem bedienen sind nicht voneinander abhängig, denn der Schalter hat dank Kontrolle über die Stromzufuhr immer oberste Priorität.
+
+* Invisibility: The sensor network is not visible and no user interaction is needed.
+Dadurch, dass unsere Applikationen keine Daten von dem Nutzer benötigt benötigen wir keine separate benutzerfreundliche Schnittstelle.
+Der Nutzer nimmt nur die Lampe wahr und dadurch wird diese als Zentrum der Logik wahrgenommen.
+Das passt perfekt auf das Unsichtbarkeitsprinzip, womit Komplexität vor dem Nutzer verschleiert wird.
 
 ## Ausblick
 
