@@ -20,7 +20,7 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
 1. [Konzeption](#Konzeption)
   * [Anwendungsidee](#Anwendungsidee)
   * [Projektziel](#Projektziel)
-  * [Service Design](#Service Design)
+  * [Service-Design](#Service-Design)
 2. [Implementation](#Implementation)
   * [MVP](#MVP)
   * [Erweiterung](#Erweiterung)
@@ -34,6 +34,7 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
   * [Verantwortlichkeiten](#Verantwortlichkeiten)
   * [Vorgehen](#Vorgehen)
 4. [IoT-Methoden](#IoT-Methoden)
+  * [Living-Lab](#Living-Lab)
   * [IoT-Design-Prinzipien](#IoT-Design-Prinzipien)
 5. [Ausblick](#Ausblick)
 6. [Präsentation](#Präsentation)
@@ -139,8 +140,7 @@ https://www.it-agile.de/wissen/agiles-engineering/pair-programming/
 
 ## IoT Methoden
 
-## Living Lab
-
+### Living Lab
 Ein Living Lab ist eine unstetige Umgebung, in unserem Fall eine Sensor- und Aktorumgebung. 
 In dieser Umgebung wird uns Infrastruktur bereitstellt. 
 Wir nutzten das Living Lab womit uns ein einfacher Weg bereitgestellt wurde um Home Assistant anzusprechen.
