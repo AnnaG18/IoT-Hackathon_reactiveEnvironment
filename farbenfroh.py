@@ -7,6 +7,7 @@ __author__      = "FarbenFroh"
 import homeassistant.remote as remote
 import configparser
 import ast
+import time
 
 #Config
 Config = configparser.ConfigParser()
@@ -47,92 +48,64 @@ def getStateAvg(api, list):
         avg = 0
     return avg
 
-def setLightColor(api, values):
-    bright = 0.0
-    lamp = Config.get('Sensors', 'Lamp')
+values = {'temp_min':False,'temp_max':False,'temp_bright':0,'hum_min':False,'hum_max':False,'hum_bright':0,'Co2_max':False,'Co2_bright':0}
+
+def callSetApi(api, exceeded, bright_max, color):
+    bright = 1.0
     reachedmax = False
+    lamp = Config.get('Sensors', 'Lamp')
+    global goodRoom
 
-
-    while(values['temp_min']==True):
-        if bright <= values['temp_bright'] and not reachedmax:
+    while (exceeded == True):
+        print(bright)
+        if bright <= bright_max and not reachedmax:
             bright = bright + 1
-            if (bright == values['temp_bright']):
+            if (bright == bright_max):
                 reachedmax = True
         else:
-            if bright == 0:
-                values['temp_min'] = False
+            if bright == 1:
+                exceeded = False
                 reachedmax = False
+                goodRoom = False
+
             bright = bright - 1
 
-        color = ast.literal_eval(Config.get('Sectors', 'Temp_Min_Color'))
-        remote.call_service(api, 'light', 'turn_on', {'entity_id': lamp, 'brightness': bright,
-                                                          'rgb_color': color})
-
-    while(values['temp_max'] == True):
-        if bright <= values['temp_bright'] and not reachedmax:
-            bright = bright + 1
-            if (bright == values['temp_bright']):
-                reachedmax = True
-        else:
-            if bright == 0:
-                values['temp_max'] = False
-                reachedmax = False
-            bright = bright - 1
-        color = ast.literal_eval(Config.get('Sectors', 'Temp_Max_Color'))
-        remote.call_service(api, 'light', 'turn_on',
-                            {'entity_id': lamp, 'brightness': bright, 'rgb_color': color})
-
-    while(values['hum_min'] == True):
-        if bright <= values['hum_bright'] and not reachedmax:
-            bright = bright + 1
-            if (bright == values['hum_bright']):
-                reachedmax = True
-        else:
-            if bright == 0:
-                values['hum_min'] = False
-                reachedmax = False
-            bright = bright - 1
-        color = ast.literal_eval(Config.get('Sectors', 'Hum_Min_Color'))
-        remote.call_service(api, 'light', 'turn_on',
-                            {'entity_id': lamp, 'brightness': bright, 'rgb_color': color})
-
-    while(values['hum_max'] == True):
-        if bright <= values['hum_bright'] and not reachedmax:
-            bright = bright + 1
-            if (bright == values['hum_bright']):
-                reachedmax = True
-        else:
-            if bright == 0:
-                values['hum_max'] = False
-            bright = bright - 1
-        color = ast.literal_eval(Config.get('Sectors', 'Hum_Max_Color'))
-        remote.call_service(api, 'light', 'turn_on',
-                            {'entity_id': lamp, 'brightness': bright, 'rgb_color': color})
-
-    while(values['Co2_max'] == True):
-        if bright <= values['Co2_bright'] and not reachedmax:
-            bright = bright + 1
-            if (bright == values['Co2_bright']):
-                reachedmax = True
-        else:
-            if bright == 0:
-                values['Co2_max'] = False
-                reachedmax = False
-            bright = bright - 1
-        color = ast.literal_eval(Config.get('Sectors', 'Co2_Max_Color'))
         remote.call_service(api, 'light', 'turn_on', {'entity_id': lamp, 'brightness': bright, 'rgb_color': color})
+        time.sleep(0.1)
+
+def setLightColor(api, values):
+    lamp = Config.get('Sensors', 'Lamp')
+    goodRoom = True
+
+    color = ast.literal_eval(Config.get('Sectors', 'Temp_Min_Color'))
+    callSetApi(api, values['temp_min'], values['temp_bright'], color)
+
+    color = ast.literal_eval(Config.get('Sectors', 'Temp_Max_Color'))
+    callSetApi(api, values['temp_max'], values['temp_bright'], color)
+
+    color = ast.literal_eval(Config.get('Sectors', 'Hum_Min_Color'))
+    callSetApi(api, values['hum_min'], values['hum_bright'], color)
+
+    color = ast.literal_eval(Config.get('Sectors', 'Hum_Max_Color'))
+    callSetApi(api, values['hum_max'], values['hum_bright'], color)
+
+    color = ast.literal_eval(Config.get('Sectors', 'Co2_Max_Color'))
+    callSetApi(api, values['Co2_max'], values['Co2_bright'], color)
+
+    if goodRoom:
+        color = ast.literal_eval(Config.get('Sectors', 'Default_Color'))
+        remote.call_service(api, 'light', 'turn_on', {'entity_id': lamp, 'brightness': 1, 'rgb_color': color})
 
 def maxBright(value):
     if(value>100):
         value = 100
-    elif(value<0):
-        value = 0
+    elif(value<1):
+        value = 1
     return value
 
 #Permament loop
 run = True
 while run:
-    #Get average values
     values = {'temp_min':False,'temp_max':False,'temp_bright':0,'hum_min':False,'hum_max':False,'hum_bright':0,'Co2_max':False,'Co2_bright':0}
 
     tempAvg = getStateAvg(api, temperature_ids)
@@ -157,3 +130,4 @@ while run:
         values['Co2_bright'] = maxBright((Co2Avg - int(Config.get('Sectors', 'Co2_Max'))) * 0.1)
 
     setLightColor(api, values)
+
