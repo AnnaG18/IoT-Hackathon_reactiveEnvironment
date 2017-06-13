@@ -126,6 +126,17 @@ Emotionen werden durch einen Smiley aus den Sensordaten generiert.
 Unsere Netzwerk-Topologie besteht aus Sensoren, Gateway, Philips Hue Lampe und Controller. Sensoren existieren zu Luftfeuchtigkeit, CO2-Gehalt und Temperatur; sie gelten als Smart Objects. Sie senden die Information zu einem Gateway, dieser wiederum gibt die Daten an den Controller weiter. 
 Über die Python API der Home Assistant Plattform wird unser Skript farbenFROH angebunden. Dieser liest Sensordaten aus und ruft den light Service auf. Auf diese Weise kann der Status der Lampe verändert werden. Je nach eingegangen Daten verändert die Lampe Philips Hue ihre Farbe.
 
+Home Assistant
+Home Assistant ist eine Open-Source Home Automation Plattform. Die Plattform hat eine skalierbare Software-Architektur und kann mit Geräten, Services und Automatisierungsregeln konfiguriert werden. Home Assistant arbeitet als Ereignis-gesteuertes System. Es stellt einen Python 3 basierten Webserver zur Verfügung. Der Webserver kann auf allen Systemen installiert werden, das Python 3 unterstützt wie bspw. auf einem Raspberry Pi.  Eine Anbindung an eine Cloud oder einen Hub auf dem eigenen Rechner ist nicht notwendig. Home Assistant hat eine State Machine, die den Überblick über alle „Entities“ behält. Für jeden unterstützten Service bietet die Plattform eine Komponente, die mit diesem Service kommunizieren kann.
+
+Vorteile von Home Assistant:
+#•	freie und quelloffene Software 
+#•	Datenschutz und Sicherheit durch lokalen Ansatz ohne Speicherung in der Cloud. 
+#•	Stärken von der Programmiersprache Python
+##o	Flexibel beim Testen neuer Features  
+##o	Leicht einsetzbare und verständliche Plattform
+
+
 
 ### Geschäftliche Relevanz
 #### HHZ
