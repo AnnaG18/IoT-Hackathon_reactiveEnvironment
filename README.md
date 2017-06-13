@@ -69,11 +69,13 @@ Das Team besteht aus folgenden Personen:
 * Peter Kühfuß
 
 ### Verantwortlichkeiten
-
+Bei der Konzeption und der Ideensammlung haben alle Teammitglieder gleichermaßen mitgewirkt. Mit Hilfe von Meetings am HHZ und Skypemeetings, an denen alle Teammitglieder teilgenommen haben, wurden Entscheidungen getroffen, sowie Aufgaben verteilt. Dabei hatten sich unter anderem Anna Gorr und Natascha Sigle mit dem Service Design näher beschäftigt, Johannes Wanner mit den geforderten und für unser Szenario wichtigen To Do's und Peter Kühfuß setzte sich mit der technischen Konzeption auseinander. Auch die Logoerstellung und Dokumentation unseres Vorgehens wurde an alle Teammitglieder aufgeteilt. 
 
 ### Vorgehen
-Um die Qualität des sicherzustellen haben wir Pairprogramming angewendet.
+Am Hackathon selbst wurde mit einer Besprechungsrunde begonnen. Hierbei wurde das Vorhaben über die zwei Tage grob geplant und das exakte Vorgehen erstmals nur für den ersten Tag durchgesprochen. Aufgrund der guten Vorbereitung durch einige Teambesprechungen im Vorhinein, konnten wir rasch starten.
+Um die Qualität des Quellcodes sicherzustellen wurde die Arbeitstechnik "Pairprogramming" angewendet. Anna Gorr und Johannes Wanner programmierten den Code zur Ansteuerung der Philips Hue Lampe (an-/ausschalten der Lampe, Farbeinstellung der Lampe, Übergänge der Farben). Natascha Sigle und Peter Kühfuß programmierten gleichzeitig den Code zur Verarbeitung der Sensorwerte (Sensorwerte auslesen, Mittelwert errechnen, Configdatei erstellen, Stärke des Lichtes zur Intensivität des Zustandes anpassen).
 
+Erklärung zu unserer Arbeitstechnik:
 "Pair Programming oder Programmieren in Paaren ist eine zentrale Technik aus dem eXtreme Programming (XP). Beim Pair Programming sitzen zwei Entwickler gleichberechtigt an einem Rechner und arbeiten gemeinsam an einer Aufgabe. Die zwei Entwickler nehmen unterschiedliche Rollen ein, welche oft mit „Pilot“ und „Navigator“ bezeichnet werden. Der „Pilot“ schreibt den Code, während der „Navigator“ die Korrektheit des Codes und des Lösungsansatzes überwacht und parallel über Verbesserungen am Design nachdenkt. Weil beide Entwickler gleichberechtigt sind, gibt es keine feste Aufgabenteilung."
 https://www.it-agile.de/wissen/agiles-engineering/pair-programming/
 
@@ -98,7 +100,7 @@ Rückmeldung in Farben:
 Zusätzliche Informationen:
 * Bei Normal- bzw Optimalzustand leuchtet die Lampe weiß
 * Die Stärke des jeweiligen Zustands wird durch Helligkeit/Intensität der Farbe ausgedrückt
-* Verschiedene Zustände werden nacheinander wiederholt. Die Übergänge werden ähnlich einem Herzschlag dargestellt.
+* Verschiedene Zustände werden nacheinander wiederholt. Die Übergänge we rden ähnlich einem Herzschlag dargestellt.
 
 ### Erweiterung
 Wenn wir noch Zeit haben nach dem MVP:
