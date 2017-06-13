@@ -1,20 +1,6 @@
 # IoT-Hackathon
 ![logo](https://user-images.githubusercontent.com/28348801/27071192-2f2907dc-501c-11e7-970b-594abed77fc0.jpg)
 Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, das die Qualität der Lehr- und Lernumgebung verbessern soll. Mit Hilfe einer Lampe kann, anhand von verschiedene Farben, der Gehalt von CO2 oder die aktuelle Raumtemperatur dargestellt werden. Da die Lampe den Istzustand anzeigt, kann durch eine sofortige Reaktion der Studenten oder des Professors, beispielsweise mit Lüften des Klassenraums oder Einlegen einer kurzen Pause, die Qualität der Lehr- und Lernumgebung sogleich verbessert werden.
-
-## ToDo
-* Vorgehen
-  * Implementierung
-  * Präsentation
-  * Demo
-  * Repository
-* Dokumentation
-  * Iot Entwurfsmethode
-  * Einordnen in IoT Architektur
-  * Bezug zum Geschäftlichen Potential herstellen
-  * gesamte Readme in Word einfügen um rechtschreibprüfung zu nutzen.
-* Logging von Daten
-* Code Kommentieren
  
 ## Inhaltsverzeichnis
 1. [Konzeption](#Konzeption)
