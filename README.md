@@ -65,7 +65,7 @@ Service Blueprint:
 
 ## Implementation
 ### MVP
-Nach der teilweisen Implementierung des Service Design einer vorherigen Projektgurppe, wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie Sensorknoten, die Temperatur, CO2-Gehalt und Luftfeuchtigkeit im Raum 125 messen, installiert.
+Nach der teilweisen Implementierung des Service Design einer vorherigen Projektgruppe, wurden im Herman Hollerith Zentrum ein Controller, ein Gateway sowie Sensorknoten, die Temperatur, CO2-Gehalt und Luftfeuchtigkeit im Raum 125 messen, installiert.
 Die MVP besteht nun darin, dass eine ganzheitliche Verbindung zwischen den einzelnen Komponenten hergestellt wird. Die Umgebungsqualität soll anhand einer Lampe farblich dargestellt werden können.
 
 Außerdem dreht es sich um die Regelerstellung zur Umsetzung verschiedener Use Cases. Beispielsweise ist ein Use Case die farbliche Änderung einer Glühbirne auf blau, wenn die Raumtemperatur zu kalt ist. Dazu muss bei der Regelerstellung eine Temperaturgrenze definiert werden. Daher ist es wichtig, dass man weiß, welcher Sensor oder welche Komponente welche Werte rückmeldet.
@@ -84,17 +84,17 @@ Zusätzliche Informationen:
 Bei Normal- bzw Optimalzustand leuchtet die Lampe weiß. Die Stärke des jeweiligen Zustands wird durch Helligkeit/Intensität der Farbe ausgedrückt. Hat die Lampe beispielsweiße den Wert 'Temperatur zu niedrig', dann wird die Farbe blau angezeigt. Dies wird durch ein langsames Blinken verdeutlicht. Das heißt, die Lampe wechselt von sehr hellem blau in dunktleres, intensiveres blau und wieder zurück in helles blau. Ist der Bereich der Optimaltemperatur nur um 1°C unterschritten, wird dies durch einen Wechsel von einem sehr hellen blau in ein nur wenig dunkleres blau dargestellt. Dabei spielt die Länge der anzuzeigenden Farbe ebenfalls eine Rolle. Die Lampe braucht länger um von sehr hell in sehr dunkel, als von sehr hell in nur wenig dunkler zu wechseln. Dies wird erst deutlich, wenn mindestens zwei Werte nicht im Optimalbereich liegen. In diesem Fall wechseln sich die Farben ab. Wird eine Farbe länger und farbintensiver angezeigt, als die andere, ist deutlich erkennbar, dass diese weiter vom Optimalbereich entfernt ist als die andere.
 
 ### Erweiterung
-Nach der kompletten Fertigstellung bzw. Umsetzung unseres MVP haben wir noch ein Idee gehabt, die zur statistischen Zecken hilfreich ist. Um die Werte später besser auslesen zu können und einen besseren Einblick in die Statusänderungen zwischen den Zuständen zu bekommen, wurde eine Logging-Datei erstellt. Hier werden alle Zustandsänderung, wie beispielsweise 'Optimalzustand erreicht', 'Temperatur zu niedrig', 'Luftfeuchtigkeit zu hoch', usw. festgehalten.
+Nach der kompletten Fertigstellung bzw. Umsetzung unseres MVP hatten wir noch eine Idee. Die Idee war eine Logging-Datei um die Werte später besser auslesen zu können. Außerdem hilft die Datei  einen besseren Einblick in die Statusänderungen zwischen den Zuständen zu bekommen. Hier werden alle Zustandsänderung, wie beispielsweise 'Optimalzustand erreicht', 'Temperatur zu niedrig', 'Luftfeuchtigkeit zu hoch', usw. festgehalten.
 
 ### Architektur
 ![iot-aufbau](https://user-images.githubusercontent.com/22808808/27073909-c7c093a8-5025-11e7-9019-df2dca6f7e7d.jpg)
 
-Unsere Netzwerk-Topologie besteht aus Sensoren, Gateway, Philips Hue Lampe und Controller. Sensoren existieren zu Luftfeuchtigkeit, CO2-Gehalt und Temperatur; sie gelten als Smart Objects. Sie senden die Information zu einem Gateway, dieser wiederum gibt die Daten an den Controller weiter. 
-Über die Python API der Home Assistant Plattform wird unser Skript farbenFROH angebunden. Dieser liest Sensordaten aus und ruft den light Service auf. Auf diese Weise kann der Status der Lampe verändert werden. Je nach eingegangen Daten verändert die Lampe Philips Hue ihre Farbe.
+Unsere Netzwerk-Topologie besteht aus Sensoren, Gateway, Philips Hue Lampe und Controller. Es sind Sensoren vorhanden um Luftfeuchtigkeit, CO2-Gehalt und Temperatur zu messen; sie gelten als Smart Objects. Sie senden die Information zu einem Gateway, dieser wiederum gibt die Daten an den Controller weiter. 
+Über die Python API der Home Assistant Plattform wird unser Skript farbenFROH angebunden. Dieses liest Sensordaten aus und ruft den light Service auf. Auf diese Weise kann der Status der Lampe verändert werden. Je nach eingegangen Daten verändert die Lampe Philips Hue ihre Farbe.
 
 Home Assistant 
 
-Home Assistant ist eine Open-Source Home Automation Plattform. Die Plattform hat eine skalierbare Software-Architektur und kann mit Geräten, Services und Automatisierungsregeln konfiguriert werden. Home Assistant arbeitet als Ereignis-gesteuertes System. Es stellt einen Python 3 basierten Webserver zur Verfügung. Der Webserver kann auf allen Systemen installiert werden, das Python 3 unterstützt wie bspw. auf einem Raspberry Pi.  Eine Anbindung an eine Cloud oder einen Hub auf dem eigenen Rechner ist nicht notwendig. Home Assistant hat eine State Machine, die den Überblick über alle „Entities“ behält. Für jeden unterstützten Service bietet die Plattform eine Komponente, die mit diesem Service kommunizieren kann.
+Home Assistant ist eine Open-Source Home Automation Plattform. Die Plattform hat eine skalierbare Software-Architektur und kann mit Geräten, Services und Automatisierungsregeln konfiguriert werden. Home Assistant arbeitet als Ereignis-gesteuertes System. Es stellt einen Python 3 basierten Webserver zur Verfügung. Der Webserver kann auf allen Systemen installiert werden, die Python 3 unterstützen wie bspw. auf einem Raspberry Pi.  Eine Anbindung an eine Cloud, oder einen Hub auf dem eigenen Rechner ist nicht notwendig. Home Assistant hat eine State Machine, die den Überblick über alle „Entities“ behält. Für jeden unterstützten Service bietet die Plattform eine Komponente, die mit diesem Service kommunizieren kann.
 
 Vorteile von Home Assistant:
 * freie und quelloffene Software 
