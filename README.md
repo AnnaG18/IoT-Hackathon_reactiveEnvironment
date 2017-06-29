@@ -134,17 +134,18 @@ Während unseres Entwicklungsprozesses ist unsere Infrastruktur dynamisch anpass
 Bedürfnissen angepasst.
 
 ### IoT Design Prinzipien
-Bei der Konzeptionierung von IoT Architektur folgten wir folgenden Design Prinzipien aus der IoT Vorlesung:
+Bei der Konzeptionierung von IoT Architektur folgten wir Design Prinzipien aus der IoT Vorlesung:
 
 * Rückkoppelung: 
-Das Feedback unserer Applikation ist verbesserungswürdig, da die Farbwerte erst dem Nutzer erklärt werden muss.
-Wir haben aber versucht intuitive Assoziationen zu verwenden. Der Zustand zu heiß wird beispielweise durch rote Farbe angezeigt.
-Genauso wenn die Temperatur zu kalt ist, soll die Lampe Blau werden.
+Das Feedback der Lampe ist verbesserungswürdig, da die Farbwerte erst dem Nutzer erklärt werden muss.
+Es wurden bekannte intuitive Assoziationen verwendet. Der Zustand zu heiß wird beispielsweise durch eine rote Farbe angezeigt.
+Genauso wenn die Temperatur zu kalt ist soll die Lampe Blau werden. Aber es gibt bereits ein Konzept für noch verständlicheres Feedback siehe Ausblick.
 
 * Manueller Vorrang: 
-Dank einem physikalischen Schalter an der Hue Lampe haben wir kein Problem, das Nutzeraktion nicht ausgeführt wird.
-Die Priorisierung von unseren Zuständen im Verhältnis zu manuellen Dedienen sind nicht voneinander abhängig,
-denn der Schalter hat dank der Kontrolle über die Stromzufuhr immer oberste Priorität.
+Die Zustände in welche die Lampe versetzen wurde haben keine Beziehung zum Schalter. 
+Deswegen muss die  Prioriserung der Zustände den manuellen Vorrang nicht beachten.  
+Der Schalter hat Kontrolle über die Stromzufuhr und damit immer oberste Priorität. 
+Dank diesem Schalter an der Hue Lampe haben wir kein Problem, das Nutzeraktion nicht ausgeführt wird.
 
 * Unsichtbarkeit
 Dadurch, dass unsere Applikationen keine Daten von dem Nutzer benötigt, benötigen wir keine separate benutzerfreundliche Schnittstelle.
