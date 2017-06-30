@@ -4,18 +4,18 @@ Das Team "FarbenFROH" hat sich für den Hackathon 2017 ein Szenario überlegt, d
  
 ## Inhaltsverzeichnis
 1. [Konzeption](#konzeption)
-  * [Anwendungsidee](#anwendungsidee)
+  * [Anwendungsidee](#anwendungsidee---use-case)
   * [Projektziel](#projektziel)
   * [Service-Design](#service-design)
 2. [Implementation](#implementation)
   * [MVP](#mvp)
   * [Erweiterung](#erweiterung)
   * [Architektur](#architektur)
-  * [Relevanz](#relevanz)
+  * [Relevanz](#geschäftliche-relevanz)
     * [HHZ](#hhz)
     * [Firmen](#firmen)
-  * [Hardware](#hardware)
-3. [Organization](#organization)
+  * [Hardware](#verwendete-hardware)
+3. [Organization](#organisation)
   * [Teammitglieder](#teammitglieder)
   * [Verantwortlichkeiten](#verantwortlichkeiten)
   * [Vorgehen](#vorgehen)
@@ -165,4 +165,4 @@ Beispiele für Smileys in unserem Szenario sind:
 Ein weiteres Feature könnte eine Google Kalender Integration darstellen. Mit Hilfe des Stundenplans schaltet sich die Lampe zu Beginn der Vorlesung ein und zum Ende der Vorlesung aus. Genauso könnte abgefragt werden, ob an diesem Tag überhaupt eine Vorlesung stattfindet (ohne Bezug zur Länge der Vorlesung) und wenn ja, schaltet sich die Lampe anhand der Öffnungszeiten des HHZ ein und wieder aus.
 
 ## Präsentation
-vgl. Ordnerstruktur
+(FarbenFROH-Präsentation)[https://github.com/AnnaG18/IoT-Hackathon_reactiveEnvironment/blob/master/HHZ_farbenFROH.pptx]
