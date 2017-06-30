@@ -165,4 +165,4 @@ Beispiele für Smileys in unserem Szenario sind:
 Ein weiteres Feature könnte eine Google Kalender Integration darstellen. Mit Hilfe des Stundenplans schaltet sich die Lampe zu Beginn der Vorlesung ein und zum Ende der Vorlesung aus. Genauso könnte abgefragt werden, ob an diesem Tag überhaupt eine Vorlesung stattfindet (ohne Bezug zur Länge der Vorlesung) und wenn ja, schaltet sich die Lampe anhand der Öffnungszeiten des HHZ ein und wieder aus.
 
 ## Präsentation
-(FarbenFROH-Präsentation)[https://github.com/AnnaG18/IoT-Hackathon_reactiveEnvironment/blob/master/HHZ_farbenFROH.pptx]
+[FarbenFROH-Präsentation](https://github.com/AnnaG18/IoT-Hackathon_reactiveEnvironment/blob/master/HHZ_farbenFROH.pptx)
